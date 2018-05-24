@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+
+    "name": "Deals For Good by C1",
+    "description": "Donate to charities for deals",
+
+    "version": "0.1",
+
+    "background": {
+        "scripts": [ "background.js" ],
+        "persistent": false
+    },
+
+    "permissions": [
+        "declarativeContent",
+        "activeTab"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["*://*/*cart*"],
+        "css": [ "content_scripts/parse.css"],
+        "js": [ "content_scripts/jquery.min.js",
+                "content_scripts/comment-parser.js",
+                "content_scripts/main.js",
+                "popup/popup.js"]
+      }
+    ],
+
+    "page_action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "popup/icon.png",
+        "default_title": "Deals for Good"
+    }
+}

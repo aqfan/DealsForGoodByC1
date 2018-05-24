@@ -36,7 +36,7 @@ def dealpage(id):
 
 @app.route('/')
 def homepage():
-	return 'various deals are linked to here'
+	return render_template
 
 @app.route('/merchants')
 def merchantpage():

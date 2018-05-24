@@ -1,0 +1,111 @@
+/*builtin*/
+*{
+	font-family: 'Quicksand';
+
+}
+div{
+	padding-bottom:0;
+	text-align:center;
+	
+	font-size: 1em;
+
+}
+p{
+	text-align: left;
+	font-family:'Raleway';
+	font-size: 1em;
+	margin-top: 10px;
+}
+a{
+	color:gray;
+	width:50px;
+	text-decoration: none;
+    border-bottom: 2px solid transparent;    
+    width: 0px;
+    transition: 0.5s ;
+    /*white-space: nowrap;*/
+    height: 23px;
+  
+}
+
+/*classes*/
+
+
+
+.page-header{
+	margin:0;
+	padding-top: 1vh;
+}
+
+.vertical-center {
+  /*min-height: 50%;   Fallback for browsers do NOT support vh unit 
+  min-height: 50vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.vertical-text {
+	transform: rotate(-90deg);
+}
+.jumbotron{
+	background: url("charity.jpg") no-repeat 100%;
+	background-size: 100%;
+	background-attachment:fixed;
+	margin-bottom: 0;
+	height:70vh;
+}
+.row{
+	/*margin-bottom:50px;*/
+}
+
+.projectTitle{
+
+	text-align:right;
+	font-size: 3em;
+	font-family: 'Raleway';
+}
+
+.page-footer{
+}
+
+.store{
+	width: 100px;
+	height : auto;
+	/*outline: solid grey;*/
+
+}
+.oblique{
+	font-style:oblique;
+}
+
+.i-am-centered { margin: auto; max-width: 1000px;}
+/*IDs */
+
+#title{
+	font-size: 2em;
+	text-align: left;
+}
+
+
+#aboutPG{
+	margin:5vw;
+	padding:2vw;
+	color:white;
+	background: DimGray;
+	background-size: 100%;
+
+}
+
+
+
+#navbar {
+
+	padding:1.5vh; 
+	position:sticky; 
+	position:-webkit-sticky; 
+	top: 0; 
+	background-color:white; 
+	z-index: 2;
+}

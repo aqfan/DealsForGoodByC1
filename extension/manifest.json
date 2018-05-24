@@ -13,15 +13,19 @@
 
     "permissions": [
         "declarativeContent",
-        "activeTab"
+        "activeTab",
+        "tabs",
+        "*://*/*cart*",
+        "*://*/*bag*",
+        "*://*/*basket*"
     ],
 
     "content_scripts": [
       {
-        "matches": ["*://*/*cart*"],
-        "css": [ "content_scripts/parse.css"],
+        "matches": ["*://*/*cart*",
+          "*://*/*bag*",
+          "*://*/*basket*"],
         "js": [ "content_scripts/jquery.min.js",
-                "content_scripts/comment-parser.js",
                 "content_scripts/main.js",
                 "popup/popup.js"]
       }

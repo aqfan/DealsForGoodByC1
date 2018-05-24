@@ -2,7 +2,7 @@ html, body, #wrapper
 {
 width: 400px;
 height: 100%;
-font-family: 'Roboto';font-size: 22px;
+font-family: 'Quicksand';font-size: 22px;
 color: #848484;
 
 }
@@ -13,6 +13,12 @@ body{
 #main{
 
 	
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 .bottomborder{
@@ -27,7 +33,7 @@ body{
 }
 
 #deal{
-	background-color: #F2F1F1;
+	
 }
 
 #acceptButton {

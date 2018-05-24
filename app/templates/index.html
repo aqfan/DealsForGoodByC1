@@ -1,14 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+AVAILIBLE VARIABLES PASSED IN FROM FLASK:
+{{ merchantName }}
+{{ charityName }}
+{{ costOfCoupon }}
+{{ dealTitle }}
+{{ description }}
+-->
+
 <head>
+
+    <title>{{ dealTitle }}</title>
+    <!-- TODO add stylesheet -->
+    <meta charset="UTF-8">
     <script src="../static/scripts.js"></script>
+
 </head>
+
 <body>
-    <!-- TODO change to firstnamelastname username field -->
+
+    <!-- TODO layout the rest of the website,
+    including dealTitle and dealDescription -->
+
+    <!-- TODO change to firstnamelastname username field if we have time -->
     <form id="accountIDform">
         Enter your Capital One Account ID:<br>
-        <!-- TODO make into a flask template using input type="hidden" -->
         <input type="text" name="accountID"><br>
         Enter your Account Password:<br>
         <input type="password" name="password"><br>
         <input type="submit" value="Submit">
+        <input type="hidden" name="merchant_id" value="57cf75cea73e494d8675ec4a">
+        <input type="hidden" name="purchase_date" value="0">
+        <input type="hidden" name="amount" value={{ costOfCoupon }}>
+        <input type="hidden" name="description" value={{ dealTitle }}>
     </form>
+
 </body>
+
+</html>

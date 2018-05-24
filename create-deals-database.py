@@ -6,7 +6,7 @@ import pandas as pd
 
 
 stores = ["Target", "Home Depot", "Walmart", "Amazon", "eBay", "CVS" ,"Kohl's" , "American Eagle", "Lowe's", "Nike"]
-charities = ["American Red Cross", "Doctors Without Borders", "The Nature Conservancy", "World Wildlife Fund", "UNICEF", "Save the Children", "Bill & Melinda Gates Foundation" , "Salvation Army", "Feeding America", "Habitat for Humanity"]
+charities = ["AmericanRedCross", "DoctorsWithoutBorders", "The NatureConservancy", "WorldWildlifeFund", "UNICEF", "SaveTheChildren", "Bill&MelindaGatesFoundation" , "SalvationArmy", "FeedingAmerica", "HabitatforHumanity"]
 deals = [10,10,15,20,25,10,30,15,20, 25]
 
 if __name__ == "__main__":

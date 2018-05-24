@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
 		// Define what happens on successful data submission
 		XHR.addEventListener("load", function(event) {
 			if ("Created" === event.target.responseText.slice(12, 19)) {
-				alert("Success! Your coupon code is... " + makeid());
+				alert("Success! Your coupon code is " + makeid());
 			} else {
 				alert("Something went wrong! Please try again with a different Account ID.");
 			}

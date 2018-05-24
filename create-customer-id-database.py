@@ -28,6 +28,7 @@ if __name__ == "__main__":
         CUSTOMER_DICT[FIRST_NAME + LAST_NAME] =  ALL_CUSTOMERS[customer_num]['_id']
 
 
-
+    #print CUSTOMER_DICT
+    js = json.dumps(CUSTOMER_DICT)
     with open("customerID.json", "w+") as outfile:
-          json.dump(CUSTOMER_DICT, outfile)
+          outfile.write(js)

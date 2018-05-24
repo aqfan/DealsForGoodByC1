@@ -4,9 +4,11 @@ window.addEventListener("load", function () {
 
 		// Define what happens on successful data submission
 		XHR.addEventListener("load", function(event) {
-			console.log("hi")
-
-		  alert(event.target.responseText);
+			if ("Created" === event.target.responseText.slice(12, 19)) {
+				alert("Your Coupon Code Is: " + makeid());
+			} else {
+				alert("Something went wrong! Please try again with a different Account ID.");
+			}
 		});
 
 		// Define what happens in case of error
@@ -51,3 +53,13 @@ window.addEventListener("load", function () {
   	});
 
 });
+
+function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}

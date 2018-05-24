@@ -6,15 +6,13 @@ import json
 from decimal import Decimal
 from flask import render_template
 
-
-
-customerId = 'your customerId here' #TODO have customer input their id onto the page
 apiKey = '6c8ac0ed9c3bdb249bbe32d61526f18a'
 
 dealInfo = { # mapping of ids to info about the deal
     'homeDepotWWF' : {
         'merchantID' : 'homeDepot',
-        'charityID' : 'wwf',
+        'charityNessieID' : '5b06fa43f0cec56abfa40c84',
+        'charityName' = 'World Wildlife Fund',
         'amount' : Decimal(10.00) ,
         'title' : '20% off Home Depot',
         'description' : 'longer description of the deal',
@@ -30,7 +28,7 @@ def dealpage(id):
     except KeyError:
         return '404!!!!!!!!!!!!!!!!! this deal dont exist'
 
-    # generate and return html+css+javascript based on deal info
+
 
 
 

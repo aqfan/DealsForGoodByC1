@@ -4,6 +4,7 @@ from random import choice
 from string import ascii_uppercase
 import json
 from decimal import Decimal
+from flask import render_template
 
 
 
@@ -45,12 +46,12 @@ def merchantpage():
 def charitypage():
 	return 'the charity pages are linked to here'
 
-#TODO: /merchants/merchantID
+#TODO: /merchants/<id>
 """
 describes the merchant and links the deals offered by the merchant
 """
 
-#TODO: /charities/charityID
+#TODO: /charities/<id>
 """
 describes the charity and links the deals associated with the charity
 """

@@ -32,4 +32,4 @@ if __name__ == "__main__":
              columns=["customerID"]
      )
     with open("customerID.json", "w+") as outfile:
-        json.dump(CUSTOMER_DF, outfile)
+         outfile.write(CUSTOMER_DF.to_json(orient='records', lines=True))

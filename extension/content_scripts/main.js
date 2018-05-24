@@ -5,8 +5,14 @@ var $hostname = window.location.hostname;
 console.log($url+" "+$hostname);
 var $store = $hostname.split(".")[1];
 console.log($store);
-var $comments = $('.Discount, .order-summary-price, .text-right').eq(4).text();
-console.log($comments);
+
+chrome.runtime.sendMessage({
+  'storename': window.location.hostname.split(".")[1],
+  'hostname': window.location.hostname
+});
+
+//var $comments = $('.Discount, .order-summary-price, .text-right').eq(4).text();
+//console.log($comments);
 
 // var op = $('#siteTable').find('a.author')[0];
 //

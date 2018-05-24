@@ -1,51 +1,53 @@
 window.addEventListener("load", function () {
-  function sendData() {
-    var XHR = new XMLHttpRequest();
+	function sendData() {
+		var XHR = new XMLHttpRequest();
 
-    // Bind the FormData object and the form element
-    var FD = new FormData(form);
+		// Define what happens on successful data submission
+		XHR.addEventListener("load", function(event) {
+			console.log("hi")
 
-    // Define what happens on successful data submission
-    XHR.addEventListener("load", function(event) {
-      alert(event.target.responseText);
-    });
+		  alert(event.target.responseText);
+		});
 
-    // Define what happens in case of error
-    XHR.addEventListener("error", function(event) {
-      alert('Oops! Something went wrong.');
-    });
+		// Define what happens in case of error
+		XHR.addEventListener("error", function(event) {
+		  alert('Oops! Something went wrong.');
+		});
 
-    //TODO get accountID from form data
-    var accountID =
+		// var key = '6c8ac0ed9c3bdb249bbe32d61526f18a'
+		var key = 'f641226f00870093c6ef5085ba09f6f0'
 
-    var postURl =  (
-      "http://api.reimaginebanking.com/accounts/"
-      + accountID
-      + "/purchases"
-    );
+		var accountID = new FormData(form).get("accountID");
+		var postURL =  (
+			"http://api.reimaginebanking.com/accounts/"
+			+ accountID + "/purchases"
+			+ "?key=" + key
+		);
 
-    // Set up our request
-    XHR.open("POST", postURL);
+		// var postURL = "hello";
 
-    // The data sent is what the user provided in the form
-    XHR.send(FD);
-  }
+		// Set up our request
+		XHR.open("POST", postURL);
 
-  // Access the form element...
-  var form = document.getElementById("customerIDform");
+		XHR.setRequestHeader("Content-Type", "application/json");
+		XHR.send(JSON.stringify({
+		  "merchant_id": "5b06fa43f0cec56abfa40c8a",
+		  "medium": "balance",
+		  "purchase_date": "10",
+		  "amount": 0,
+		  "status": "pending",
+		  "description": "string"
+	  	}));
 
-  // ...and take over its submit event.
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    sendData();
-  });
+  	}
+
+	// Access the form element...
+	var form = document.getElementById("accountIDform");
+
+	// ...and take over its submit event.
+	form.addEventListener("submit", function (event) {
+		event.preventDefault();
+		sendData();
+  	});
+
 });
-
-// function getAccountID(accountIDformData) {
-//   var request = new XMLHttpRequest();
-//   request.open("GET", "http://api.reimaginebanking.com/customers", true);
-//   request.onload = function () {
-//
-//   }
-//   request.send();
-// }

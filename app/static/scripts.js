@@ -15,8 +15,14 @@ window.addEventListener("load", function () {
       alert('Oops! Something went wrong.');
     });
 
-    //TODO define url
-    var postURl = ""
+    //TODO get accountID from form data
+    var accountID =
+
+    var postURl =  (
+      "http://api.reimaginebanking.com/accounts/"
+      + accountID
+      + "/purchases"
+    );
 
     // Set up our request
     XHR.open("POST", postURL);
@@ -34,3 +40,12 @@ window.addEventListener("load", function () {
     sendData();
   });
 });
+
+// function getAccountID(accountIDformData) {
+//   var request = new XMLHttpRequest();
+//   request.open("GET", "http://api.reimaginebanking.com/customers", true);
+//   request.onload = function () {
+//
+//   }
+//   request.send();
+// }

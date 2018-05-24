@@ -25,6 +25,7 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
     including dealTitle and dealDescription -->
 
     <!-- TODO change to firstnamelastname username field if we have time -->
+    <h1>Purchase Coupon Code</h1>
     <form id="accountIDform">
         Enter your Capital One Account ID:<br>
         <input type="text" name="accountID"><br>
@@ -33,8 +34,8 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
         <input type="submit" value="Submit">
         <input type="hidden" name="merchant_id" value="57cf75cea73e494d8675ec4a">
         <input type="hidden" name="purchase_date" value="0">
-        <input type="hidden" name="amount" value={{ costOfCoupon }}>
-        <input type="hidden" name="description" value={{ dealTitle }}>
+        <input type="hidden" name="amount" value="{{ costOfCoupon }}">
+        <input type="hidden" name="description" value="{{ dealTitle }}">
     </form>
 
 </body>

@@ -21,7 +21,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-	return 'HOME PAGE' #TODO add home page
+    
+	return render_template("homepage.html")
 
 @app.route('/<id>')
 def dealpage(id):
@@ -34,7 +35,7 @@ def dealpage(id):
     print(pageTitle, file=sys.stderr)
     print(pageTitle)
 
-    return render_template('index.html', **info, pageTitle=pageTitle)
+    return render_template('purchase.html', **info, pageTitle=pageTitle)
 
 if __name__ == '__main__':
 	app.run(debug=True)

@@ -30,7 +30,7 @@ def dealpage(id):
     except KeyError:
         return '404'
 
-    pageTitle = "Deals for Good: " + info['dealTitle']
+    pageTitle = info['dealTitle']  + " -  Deals For Good"
     print(pageTitle, file=sys.stderr)
     print(pageTitle)
 

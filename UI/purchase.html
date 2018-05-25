@@ -16,11 +16,11 @@
 
     </head>
 	<body>
-		
 
-		
-		
-		
+
+
+
+
 
 		<!-- Nav Bar-->
 		<div class = "row flex-nowrap justify-content-between align-items-center" id ="navbar" style ="padding-right: 3vw;">
@@ -76,9 +76,12 @@
 					</div>
 
 				</div>
+
+
 				<div class = "col-sm-6" style = "border-left: solid black; border-width: 1px;">
+          <div id="purchase_block">
 					<h1>Purchase</h1>
-					
+
 					<form style = "margin:2vw;">
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Username</label>
@@ -95,17 +98,26 @@
 					  </div>
 					  <button type="submit" class="btn btn-primary">Purchase</button>
 					</form>
+        </div>
+
+        <div id="coupon_code_block">
+          <form style = "margin:2vw;">
+            <div class = "row form-group">
+              <div class="col"><input type="text" class="form-control" value="Coupon Code" id="code"></div>
+              <div class="col"><button class="btn btn-primary">Copy code</button></div>
+            </div>
+          </form>
+        </div>
 				</div>
 
 			</div>
 
 		</div>
 
-
 		<div class="page-footer" style = "margin: 5vh;">
 				<div class = 'row'>
 					<div class = "col-sm-12"><a href="#">about us</a></div>
-					
+
 				</div>
 		</div>
 

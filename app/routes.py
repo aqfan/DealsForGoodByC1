@@ -1,3 +1,4 @@
+from app import app
 import sys
 from flask import render_template, Flask
 
@@ -17,11 +18,10 @@ dealInfo = { # mapping of ids to info about the deal
     }
 }
 
-app = Flask(__name__)
+
 
 @app.route('/')
 def homepage():
-    
 	return render_template("homepage.html")
 
 @app.route('/<id>')
@@ -30,10 +30,6 @@ def dealpage(id):
         info = dealInfo[id]
     except KeyError:
         return '404'
+    info['pageTitle'] = info['dealTitle']  + " -  Deals For Good"
 
-    pageTitle = info['dealTitle']  + " -  Deals For Good"
-
-    return render_template('purchase.html', **info, pageTitle=pageTitle)
-
-if __name__ == '__main__':
-	app.run(debug=True)
+    return render_template('purchase.html', **info)

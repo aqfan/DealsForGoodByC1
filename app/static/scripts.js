@@ -6,8 +6,8 @@ window.addEventListener("load", function () {
 		XHR.addEventListener("load", function(event) {
 			if ("Created" === event.target.responseText.slice(12, 19)) {
 				alert("Success! Your coupon code is " + makeid()
-				      + '\n\n' + "Nessie Confirmation: " + '\n'
-				      + event.target.responseText
+				      + '\n\n' + "Nessie Confirmation: " + '\n\n'
+				      + event.target.responseText + '\n'
 				     );
 			} else {
 				alert("Something went wrong! Please try again with a different Account ID.");

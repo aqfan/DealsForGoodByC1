@@ -72,6 +72,7 @@ def homepage():
 
 @app.route('/<id>')
 def dealpage(id):
+    print(dealInfo, file=sys.stderr)
     try:
         info = dealInfo[id]
     except KeyError:

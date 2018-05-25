@@ -78,12 +78,12 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 					<div class = "row">
 						<img src = "C1Logo.png" width = "180" height ="200">
 						<div class = "col-sm-6 " style = "text-align:left; margin-left: 4vw;">
-							<h2>Company</h2>
-							<h5 style = "color : gray;">Some descripts skjfhskjdf skfhdsjfh skjfhdj</h5>
+							<h2>{{ merchantName }}</h2>
+							<h5 style = "color : gray;">{{ merchantDescription }}</h5>
 						</div>
 					</div>
 					<div style = "border-bottom: solid black; border-width: 1px; margin: 8vh;"></div>
-					<div class = "row" style = "font-size: 7vh; margin-bottom: 5vh;">Save 20% on XXX</div>
+					<div class = "row" style = "font-size: 7vh; margin-bottom: 5vh;">{{ dealTitle }}</div>
 					<div class = "row" style = "font-size: 4vh; margin-bottom: 5vh;">By donating to</div>
 					<div class = "row" style = "font-size: 7vh;">
 						<div style = "margin-right: 5vh;">

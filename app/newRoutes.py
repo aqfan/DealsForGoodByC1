@@ -13,7 +13,7 @@ dealInfo = {
         'charityName' : deal['charity'],
         'percent' : deal['percent_off'],
         'merchantPictureURL' : 'http://logo.clearbit.com/' + deal['store-link'],
-        'charityURL' : deal['charity_link'],
+        'charityURL' : deal['charity-link'],
     }
     for deal in json.loads(response.text)
 }

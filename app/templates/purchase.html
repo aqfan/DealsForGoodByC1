@@ -17,6 +17,7 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 	  <title>{{ pageTitle }}</title>
 	  <meta charset="UTF-8">
 	  <script src="../static/scripts.js"></script>
+	  
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
       <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
@@ -87,7 +88,7 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 					<div class = "row" style = "font-size: 4vh; margin-bottom: 5vh;">By donating to</div>
 					<div class = "row" style = "font-size: 7vh;">
 						<div style = "margin-right: 5vh;">
-							<img src = "charity.jpg" style = "width:100%;height :auto;">
+							<img src = {{ charityPictureURL }} style = "width:100%;height :auto;">
 						</div>
 					</div>
 
@@ -97,8 +98,8 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 					
 					<form id="accountIDform" style = "margin:2vw;">
 					  <div class="form-group">
-					    <label for="exampleInputEmail1">Capital One Account ID</label>
-					    <input type="text" id="exampleInputEmail1" class="form-control" name="accountID">
+					    <label for="exampleInputEmail1">Capital One Username</label>
+					    <input type="text" id="exampleInputEmail1" class="form-control" name="username">
 					  </div>
 					  <div class="form-group">
 					    <label for="exampleInputPassword1">Password</label>

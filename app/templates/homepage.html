@@ -7,8 +7,8 @@
 
 
 	  <!-- custom stylesheet -->
-	  <link rel="stylesheet" type= "text/css" href="website.css">
-	  <link rel="stylesheet" type= "text/css" href="navbar.css">
+	  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename = 'css/website.css') }}">
+	  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename = 'css/navbar.css') }}">
 
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,7 +25,7 @@
 		<!-- Nav Bar-->
 		<div class = "row flex-nowrap justify-content-between align-items-center" id ="navbar">
 			<div class = "col-sm-1">
-				<img src = "C1Logo.png" width = "42" height ="46">
+				<img src ="{{ url_for('static', filename = 'images/C1Logo.png') }}" width = "42" height ="46">
 			</div>
 			<div class = "col-sm-7" id="title" style = "text-align: left;">DEALS FOR GOOD</div>
 			<div class = "col-sm-3" id = "search">
@@ -57,7 +57,7 @@
 		<div class="jumbotron vertical-center" >
 			
 				
-				<h1 style= "color: lightgrey; font-size: 5em;color:white;font-weight: bolder;"> Some inciteful comment</h1>
+				<h1 style= "color: lightgrey; font-size: 5em;color:white;font-weight: bolder;"> Some insightful comment</h1>
 			
 				
 				
@@ -70,52 +70,52 @@
 			<h1 style = "margin-bottom: 7vh;">Participating stores</h1>
 			<div class = "row">
 				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><a href = "#"><img src = "C1Logo.png"></a></div>
+					<div style="display:flex;justify-content:center;align-items:center;width:100%;">
+  						<div><a href = "#"><img src = "{{ url_for('static', filename = 'images/AELogo.jpg') }}"></a></div>
+					</div>
+				</div>
+				<div class = "col-sm-4 store"> 
+					<div style="display:flex;justify-content:center;align-items:center;height:auto;">
+  						<div><img src = "{{ url_for('static', filename = 'images/AELogo.jpg') }}" ></div>
 					</div>
 				</div>
 				<div class = "col-sm-4 store"> 
 					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-			</div>
-			<div class = "row">
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
+  						<div><img src = "CVLogo.png" ></div>
 					</div>
 				</div>
 			</div>
 			<div class = "row">
 				<div class = "col-sm-4 store"> 
 					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
+  						<div><img src = "F2Logo.jpg" ></div>
 					</div>
 				</div>
 				<div class = "col-sm-4 store"> 
 					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
+  						<div><img src = "HDLogo.jpg" ></div>
 					</div>
 				</div>
 				<div class = "col-sm-4 store"> 
 					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
+  						<div><img src = "HMLogo.jpeg" ></div>
+					</div>
+				</div>
+			</div>
+			<div class = "row">
+				<div class = "col-sm-4 store"> 
+					<div style="display:flex;justify-content:center;align-items:center;">
+  						<div><img src = "TALogo.png" ></div>
+					</div>
+				</div>
+				<div class = "col-sm-4 store"> 
+					<div style="display:flex;justify-content:center;align-items:center;">
+  						<div><img src = "WALogo.jpg" ></div>
+					</div>
+				</div>
+				<div class = "col-sm-4 store"> 
+					<div style="display:flex;justify-content:center;align-items:center;">
+  						<div><img src = "WFLogo.png" ></div>
 					</div>
 				</div>
 			</div>

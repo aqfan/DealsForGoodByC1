@@ -32,8 +32,6 @@ def dealpage(id):
         return '404'
 
     pageTitle = info['dealTitle']  + " -  Deals For Good"
-    print(pageTitle, file=sys.stderr)
-    print(pageTitle)
 
     return render_template('purchase.html', **info, pageTitle=pageTitle)
 

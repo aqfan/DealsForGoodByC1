@@ -5,8 +5,9 @@ window.addEventListener("load", function () {
 		// Define what happens on successful data submission
 		XHR.addEventListener("load", function(event) {
 			if ("Created" === event.target.responseText.slice(12, 19)) {
-				alert('Success! Your coupon code is "' + makeid()
-				      + '"!\n\n\n' + 'Nessie Confirmation:' + '\n\n'
+				alert('Success! Your coupon code is "' + couponCode
+				      + '", and has already been copied to the clipboard!\n\n\n'
+					  + 'Nessie Confirmation:' + '\n\n'
 				      + event.target.responseText + '\n'
 				     );
 			} else {
@@ -29,11 +30,13 @@ window.addEventListener("load", function () {
 			+ accountID + "/purchases"
 			+ "?key=" + key
 		);
+		
 
 		// Set up our request
 		XHR.open("POST", postURL);
 
 		XHR.setRequestHeader("Content-Type", "application/json");
+		const couponCode = makeid();
 		XHR.send(JSON.stringify({
 		  "merchant_id": formData.get("merchant_id"),
 		  "medium": "balance",
@@ -42,6 +45,8 @@ window.addEventListener("load", function () {
 		  "status": "pending",
 		  "description": formData.get("description"),
 	  	}));
+		
+		return couponCode;
 
   	}
 
@@ -51,7 +56,13 @@ window.addEventListener("load", function () {
 	// ...and take over its submit event.
 	form.addEventListener("submit", function (event) {
 		event.preventDefault();
-		sendData();
+		const couponCode = sendData();
+		const ta = document.createElement('textarea');
+		ta.value = couponCode;
+		document.body.appendChild(ta);	
+		ta.select();
+		document.execCommand("copy");
+		document.body.removeChild(ta);
   	});
 
 });

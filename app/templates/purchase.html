@@ -9,12 +9,14 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 {{ charityPictureURL }}
 {{ charityDescription }}
 {{ merchantDescription }}
+{{ charityURL }}
 -->
   
   <!DOCTYPE html>
   <html>
     <head>
 	  <title>{{ pageTitle }}</title>
+	  <link rel='shortcut icon' type='image/x-icon' href="https://raw.githubusercontent.com/aqfan/DealsForGoodByC1/master/extension/popup/icon.png" />
 	  <meta charset="UTF-8">
 	  <script src="../static/scripts.js"></script>
 	  
@@ -112,7 +114,7 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 					<div class = "row" style = "font-size: 2.5vh; margin-bottom: 2vh;">By donating to</div>
 					<div class = "row" style = "font-size: 7vh;">
 						<div style = "margin-right: 5vh;">
-							<img src = {{ charityPictureURL }} style = "width:100%;height :auto;">
+							<a href={{ charityURL }}><img src = {{ charityPictureURL }} style = "width:100%;height :auto;"></a>
 						</div>
 					</div>
 

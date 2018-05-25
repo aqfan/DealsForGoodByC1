@@ -1,4 +1,7 @@
 $(function () {
+  $('#main').show();
+  $('#sorry').hide();
+
   var req = new XMLHttpRequest();
   req.responseType = "json";
   req.open("GET", "http://deals-api.herokuapp.com/deals/" + localStorage['store_name'], true);
@@ -12,6 +15,9 @@ $(function () {
         $('#icon').attr('src','http://logo.clearbit.com/' + companyInfo["store-link"]);
         $('#charity_url').attr('href', companyInfo["charity-link"])
         $('#name').text(companyInfo["store-formal"])
+      } else {
+        $('#main').hide();
+        $('#sorry').show();
       }
     }
   };

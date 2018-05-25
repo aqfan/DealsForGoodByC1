@@ -80,6 +80,11 @@ a{
 	font-style:oblique;
 }
 
+.input-group{
+	left: 125px;
+	float : right; 
+}
+
 .i-am-centered { margin: auto; max-width: 1200px;}
 /*IDs */
 

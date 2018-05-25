@@ -1,6 +1,22 @@
+  <!--
+AVAILIBLE VARIABLES PASSED IN FROM FLASK:
+{{ merchantName }}
+{{ charityName }}
+{{ costOfCoupon }}
+{{ dealTitle }}
+{{ description }}
+{{ merchantPictureURL }}
+{{ charityPictureURL }}
+{{ charityDescription }}
+{{ merchantDescription }}
+-->
+  
   <!DOCTYPE html>
   <html>
     <head>
+	  <title>{{ pageTitle }}</title>
+	  <meta charset="UTF-8">
+	  <script src="../static/scripts.js"></script>
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
       <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
@@ -62,12 +78,12 @@
 					<div class = "row">
 						<img src = "C1Logo.png" width = "180" height ="200">
 						<div class = "col-sm-6 " style = "text-align:left; margin-left: 4vw;">
-							<h2>Company</h2>
-							<h5 style = "color : gray;">Some descripts skjfhskjdf skfhdsjfh skjfhdj</h5>
+							<h2>{{ merchantName }}</h2>
+							<h5 style = "color : gray;">{{ merchantDescription }}</h5>
 						</div>
 					</div>
 					<div style = "border-bottom: solid black; border-width: 1px; margin: 8vh;"></div>
-					<div class = "row" style = "font-size: 7vh; margin-bottom: 5vh;">Save 20% on XXX</div>
+					<div class = "row" style = "font-size: 7vh; margin-bottom: 5vh;">{{ dealTitle }}</div>
 					<div class = "row" style = "font-size: 4vh; margin-bottom: 5vh;">By donating to</div>
 					<div class = "row" style = "font-size: 7vh;">
 						<div style = "margin-right: 5vh;">
@@ -79,21 +95,21 @@
 				<div class = "col-sm-6" style = "border-left: solid black; border-width: 1px;">
 					<h1>Purchase</h1>
 					
-					<form style = "margin:2vw;">
+					<form id="accountIDform" style = "margin:2vw;">
 					  <div class="form-group">
-					    <label for="exampleInputEmail1">Username</label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
-					    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					    <label for="exampleInputEmail1">Capital One Account ID</label>
+					    <input type="text" id="exampleInputEmail1" class="form-control" name="accountID">
 					  </div>
 					  <div class="form-group">
 					    <label for="exampleInputPassword1">Password</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
 					  </div>
-					  <div class="form-check">
-					    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-					    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-					  </div>
-					  <button type="submit" class="btn btn-primary">Purchase</button>
+					  <input type="submit" value="Purchase" class="btn btn-primary">
+					  
+					  <input type="hidden" name="merchant_id" value="57cf75cea73e494d8675ec4a">
+					  <input type="hidden" name="purchase_date" value="2018-05-25">
+					  <input type="hidden" name="amount" value="{{ costOfCoupon }}">
+					  <input type="hidden" name="description" value="{{ dealTitle }}">
 					</form>
 				</div>
 

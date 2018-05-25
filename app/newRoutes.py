@@ -31,9 +31,7 @@ def dealpage(id):
     except KeyError:
         return '404'
 
-    pageTitle = "Deals for Good: " + info['dealTitle']
-    print(pageTitle, file=sys.stderr)
-    print(pageTitle)
+    pageTitle = info['dealTitle']  + " -  Deals For Good"
 
     return render_template('purchase.html', **info, pageTitle=pageTitle)
 

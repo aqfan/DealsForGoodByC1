@@ -21,6 +21,7 @@ app.controller("ListController", function($scope, $http) {
       if (req.status == 200) {
         var companyInfo = req.response;
         console.log(companyInfo);
+        $scope.iconGroup.push({'image': 'http://logo.clearbit.com/' + companyInfo["store-link"]})
       }
     }
   };

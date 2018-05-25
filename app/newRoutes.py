@@ -11,7 +11,8 @@ dealInfo = {
         'merchantName' : deal['store-formal'],
         'charityPictureURL' : deal['image-link'],
         'charityName' : deal['charity'],
-        'percent' : deal['percent_off']
+        'percent' : deal['percent_off'],
+        'merchantPictureURL' : 'http://logo.clearbit.com/' + deal['store-link']
     }
     for deal in json.loads(response.text)
 }
@@ -52,6 +53,7 @@ wholf['costOfCoupon'] = 10
 wholf['dealTitle'] = "Get " + str(ae['percent']) + "%" + " off Whole Foods"
 
 hanm = dealInfo['hm']
+hanm['merchantName'] = 'H&M'
 hanm['merchantDescription'] = 'Be stylish.'
 hanm['costOfCoupon'] = 10
 hanm['dealTitle'] = "Get " + str(ae['percent']) + "%" + " off H&M"

@@ -8,6 +8,10 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 {{ costOfCoupon }}
 {{ dealTitle }}
 {{ description }}
+{{ merchantPictureURL }}
+{{ charityPictureURL }}
+{{ charityDescription }}
+{{ merchantDescription }}
 -->
 
 <head>
@@ -32,7 +36,7 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
         <input type="password" name="password"><br>
         <input type="submit" value="Submit">
         <input type="hidden" name="merchant_id" value="57cf75cea73e494d8675ec4a">
-        <input type="hidden" name="purchase_date" value="0">
+        <input type="hidden" name="purchase_date" value="2018-05-25">
         <input type="hidden" name="amount" value="{{ costOfCoupon }}">
         <input type="hidden" name="description" value="{{ dealTitle }}">
     </form>

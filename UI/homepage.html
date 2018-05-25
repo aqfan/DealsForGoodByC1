@@ -15,7 +15,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
 
 </head>
-<body ng-app="homepage">
+<body>
   <!-- Nav Bar-->
   <div class = "row flex-nowrap justify-content-between align-items-center" id ="navbar">
     <div class = "col-sm-1">
@@ -60,12 +60,12 @@
 
   <!-- stores -->
 
-  <div id = "storecollection" class = "i-am-centered" style = "margin-top: 5vh;" ng-controller="ListController">
+  <div id = "storecollection" class = "i-am-centered" style = "margin-top: 5vh;">
     <h1 style = "margin-bottom: 7vh;">Participating stores</h1>
     <div class = "row">
-      <div class = "col-sm-4 store" ng-repeat="icon in iconGroup">
+      <div class = "col-sm-4 store" >
         <div style="display:flex;justify-content:center;align-items:center;">
-          <div><a href = "#"><img ng-src="{{icon.image}}"></a></div>
+          <div><a href = "#"><img ></a></div>
         </div>
       </div>
       <!-- <div class = "col-sm-4 store">
@@ -129,7 +129,7 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="homepage.js"></script>
+  <!--<script src="homepage.js"></script>-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

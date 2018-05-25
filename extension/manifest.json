@@ -15,16 +15,18 @@
         "declarativeContent",
         "activeTab",
         "tabs",
-        "*://*/*cart*",
-        "*://*/*bag*",
-        "*://*/*basket*"
+        "https://www.google.com/*",
+        "http://www.google.com/*"
     ],
 
     "content_scripts": [
       {
         "matches": ["*://*/*cart*",
+          "*://*/*Cart*",
           "*://*/*bag*",
-          "*://*/*basket*"],
+          "*://*/*Bag*",
+          "*://*/*basket*",
+          "*://*/*Basket*"],
         "js": [ "content_scripts/jquery.min.js",
                 "content_scripts/main.js",
                 "popup/popup.js"]

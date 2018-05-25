@@ -1,31 +1,40 @@
 $(function () {
+  var req = new XMLHttpRequest();
+  req.responseType = "json";
+  req.open("GET", "http://deals-api.herokuapp.com/deals/" + localStorage['store_name'], true);
+  req.onreadystatechange = function() {
+    if (req.readyState == 4) {
+      if (req.status == 200) {
+        var companyInfo = req.response;
+        console.log(companyInfo);
+        $('#charity_img').attr('src', companyInfo["image-link"]);
+        $('#percentage').text(companyInfo.percent_off);
+        $('#icon').attr('src','http://logo.clearbit.com/' + companyInfo["store-link"]);
+        $('#charity_url').attr('href', companyInfo["charity-link"])
+      }
+    }
+  };
+  req.send();
 
-    // Event listening code goes here.
-    // Be sure to check popup.html to learn the `id` attributes of the apply/remove filter
-    // buttons and the username input box - you'll need those to listen for events!
-    // HINT: You can't access window.parser here. You'll have to use chrome.tabs.executeScript
-    // to call window.parser.filter and window.parser.parse.
-    // Get the event page
-    $('#store-name').text(localStorage['store_name']);
-    $('#icon').attr('src','https://plus.google.com/_/favicon?domain=' + localStorage['host_name'])
-
-    $('#username').on('keydown', function (e) {
-        chrome.tabs.executeScript({
-          code: 'window.parser.parse(' + $('#username').val() + ');'
-        });
-       $('#username').text(window.location.href);
+  // req = new XMLHttpRequest();
+  // req.open("GET", "http://deals-api.herokuapp.com/deals/?store-formal=Target", true);
+  // req.onreadystatechange = function() {
+  //   if (req.readyState == 4) {
+  //     if (req.status == 200) {
+  //       var companyInfo = req.response;
+  //       console.log(companyInfo);
+  //       //$('#charity_img').attr('src',companyInfo["image-link"]);
+  //     }
+  //   }
+  // };
+  // req.send();
+  $('#acceptButton').click(function() {
+    chrome.windows.create({
+      url: chrome.runtime.getURL("mypage.html"),
+      type: "popup"
+    }, function(win) {
+      // win represents the Window object from windows API
+      // Do something after opening
     });
-
-    $('#filter-off').click(function (e) {
-      // chrome.tabs.executeScript({
-      //   code: 'window.parser.filter(false);'
-      // });
-    });
-
-    $('#filter-on').click(function (e) {
-      // chrome.tabs.executeScript({
-      //   code: 'window.parser.filter(true);'
-      // });
-    });
-
+  });
 });

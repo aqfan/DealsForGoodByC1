@@ -1,0 +1,58 @@
+html, body, #wrapper
+{
+width: 400px;
+max-height: 600px;
+font-family: 'Quicksand'; font-size: 22px;
+color: #848484;
+
+}
+body{
+	outline: solid grey;
+  margin:0;
+  height:600px;
+}
+
+#main{
+
+
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.bottomborder{
+	padding-bottom: 10px;
+	margin: 15px;
+	border-bottom: solid #F2F1F1;
+	border-width: 2px;
+}
+
+#popupheader{
+	padding: 15px;
+  margin:0;
+}
+
+#deal{
+
+}
+
+#acceptButton {
+	margin: 12px;
+	width: 300px;
+    background-color: #FFC56C;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#acceptButton:hover {
+	transition-duration: 0.5s;
+    opacity: 0.5;
+}

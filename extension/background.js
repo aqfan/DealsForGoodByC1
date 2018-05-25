@@ -23,6 +23,15 @@ chrome.runtime.onInstalled.addListener(function () {
                     }),
                     new chrome.declarativeContent.PageStateMatcher({
                         pageUrl: { pathContains: 'basket'}
+                    }),
+                    new chrome.declarativeContent.PageStateMatcher({
+                        pageUrl: { pathContains: 'Bag'}
+                    }),
+                    new chrome.declarativeContent.PageStateMatcher({
+                        pageUrl: { pathContains: 'Cart'}
+                    }),
+                    new chrome.declarativeContent.PageStateMatcher({
+                        pageUrl: { pathContains: 'Basket'}
                     })
                 ],
 

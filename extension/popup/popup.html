@@ -1,41 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-      <title>Deals For Good</title>
-    <style>
-      body {
-        overflow-x: hidden;
-        width: 100px;
-      }
-
-      button {
-          margin: 5px;
-          width: 90px;
-          background: blue;
-          color: white;
-      }
-
-      input {
-          width: 90px;
-          margin: 5px;
-      }
-
-      img {
-        margin: 5px;
-        border: 2px solid black;
-        vertical-align: middle;
-        height: 75px;
-      }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
   </head>
   <body>
-    <span>Deals for Good</span><br/>
-    <img id="icon"/>
-    <span id="store-name"></span>
-    <button id="filter-off"> REMOVE FILTER </button>
-    <button id="filter-on"> APPLY FILTER </button>
-    <input id="username" type="text" placeholder="username.." />
+    <div id = "popupheader">
+      <img src="C1Logo.png" alt="C1Logo" height="46" width="42">
+    </div>
+    <div id = "main" style= "text-align: center;">
+      <div class = "bottomborder" style = "padding-top: 0; margin-top: 0; ">
+        <div > We found a deal for you!</div>
+
+      </div>
+      <div id = "deal" class = "bottomborder">
+        <h2>Get <span id="percentage">20</span>% off</h2>
+        </div>
+        <div style = "font-size: 2vh; margin-bottom: 1vh;" >by donating to</div>
+
+      <div>
+        <a id="charity_url" target="_blank"><img id="charity_img" style = "width:90%;max-height:200px;margin-top: 1vh;" src = "charity.jpg"></a>
+      </div>
+
+      <div id = "acceptButton" >
+        I want to donate!
+      </div>
+      <div >
+        <div style = "font-size: 0.6em;" >brought to you by
+          <img id="icon" style = "width:12px; margin-left: 0.5vw;" src = "C1Logo.png">
+        </div>
+
+      </div>
+
+    </div>
     <script src="jquery.min.js"></script>
     <script src="popup.js"></script>
   </body>
+  <!--script src="options.js"></script-->
 </html>

@@ -32,6 +32,10 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
 
     </head>
 	<body>
@@ -41,34 +45,52 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 		
 		
 
-		<!-- Nav Bar-->
-		<div class = "row flex-nowrap justify-content-between align-items-center" id ="navbar" style ="padding-right: 3vw;">
-			<div class = "col-sm-1">
-				<!-- link to home page -->
-				<a href="/"><img src = "/static/images/C1Logo.png" width = "90" height ="46"></a></p>
-			</div>
-			<div class = "col-sm-7" id="title" style = "text-align: left;">Deals for Good</div>
-			<div class = "col-sm-3" id = "search">
-				<div class="row">
-		        <div class="col-12">
-		            <div class="input-group">
-		                <input class="form-control border-secondary py-2" type="search" value="search">
-		                <div class="input-group-append">
-		                    <button class="btn btn-outline-secondary" type="button">
-		                         <i class="material-icons" style="font-size:25px;color:lightgray; float: right;">search</i>
-		                    </button>
-		                </div>
-		            </div>
-		        </div>
-		    	</div>
+<!-- Nav Bar-->
+  <div class = "row flex-nowrap justify-content-between align-items-center" id ="navbar">
+    <div class = "col-sm-1">
+      <a href="/"><img src ="{{ url_for('static', filename = 'images/C1Logo.png') }}" width = "90" height ="46"></a>
+    </div>
 
-			</div>
-			<div class = "col-sm-1" id="signup" >
-				<button class="btn btn-outline-secondary" type="button">
-				<a href = "#">sign up</a>
-				</button>
-			</div>
-		</div>
+    <div class = "col-sm-7" id="title" style = "text-align: left;">Deals for Good</div>
+
+    <div class = "col-sm-3"  id = "search">
+      <div class="row" >
+          <div class="col-12">
+              <div class="input-group" style = "">
+                <div id="myModal">
+                    <form action="">
+                    <select id="mySelect2" onchange="location = this.value">
+                    <option selected disabled>Search</option>
+                    <option value="http://deals-for-good.herokuapp.com/ae">American Eagle</option>
+                    <option value="http://deals-for-good.herokuapp.com/amazon">Amazon</option>
+
+                    <option value="http://deals-for-good.herokuapp.com/target">Target</option>
+                    <option value="http://deals-for-good.herokuapp.com/walmart">Walmart</option>
+                    <option value="http://deals-for-good.herokuapp.com/cvs">CVS</option>
+                    <option value="http://deals-for-good.herokuapp.com/homedepot">The Home Depot</option>
+
+                    <option value="http://deals-for-good.herokuapp.com/wholefoodsmarket">Whole Foods Market</option>
+                    <option value="http://deals-for-good.herokuapp.com/hm">H&M</option>
+                    <option value="http://deals-for-good.herokuapp.com/forever21">Forever 21</option>
+                </select>
+                </form>
+                </div>
+                  <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" 
+                           <i class="material-icons" style="font-size:10px;color:lightgray; float: right;">search</i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+    </div>
+    <div class = "col-sm-1" id="signup" >
+      <button class="btn btn-outline-secondary"  type="button" style="height: 28px; padding:0; padding-left:9px; padding-right:9px; font-size:0.9em;" >
+      <a href = "#"  >sign up</a>
+      </button>
+    </div>
+  </div>
 
 
 
@@ -87,7 +109,7 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 						</div>
 					</div>
 					<div style = "border-bottom: solid black; border-width: 1px; margin: 8vh;"></div>
-					<div class = "row" style = "font-size: 7vh; margin-bottom: 5vh;">{{ dealTitle }}</div>
+					<div class = "row" style = "font-size: 5vh; margin-bottom: 5vh;">{{ dealTitle }}</div>
 					<div style = "border-bottom: solid black; border-width: 1px; margin: 8vh;"></div>
 					<div class = "row" style = "font-size: 2.5vh; margin-bottom: 2vh;">By donating $10 to</div>
 					<div class = "row" style = "font-size: 7vh;">
@@ -129,7 +151,13 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 
       </div>
   </div>
-
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      $('#mySelect2').select2({
+          dropdownParent: $('#myModal')
+      });
+</script>
 		<!-- Optional JavaScript -->
 	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

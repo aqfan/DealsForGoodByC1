@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
 		XHR.addEventListener("load", function(event) {
 			if ("Created" === event.target.responseText.slice(12, 19)) {
 				alert("Success! Your coupon code is " + makeid()
-				      + '\n\n' + "Nessie Confirmation: " + '\n\n'
+				      + '\n\n\n' + "Nessie Confirmation: " + '\n\n'
 				      + event.target.responseText + '\n'
 				     );
 			} else {

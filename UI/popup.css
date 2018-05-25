@@ -8,6 +8,8 @@ color: #848484;
 }
 body{
 	outline: solid grey;
+  margin:0;
+  height:600px;
 }
 
 #main{
@@ -29,7 +31,8 @@ span {
 }
 
 #popupheader{
-	padding: 12px;
+	padding: 15px;
+  margin:0;
 }
 
 #deal{

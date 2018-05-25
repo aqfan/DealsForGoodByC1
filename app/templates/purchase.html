@@ -23,9 +23,9 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
       <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 
 
-	  <!-- custom stylesheet -->
-	  <link rel="stylesheet" type= "text/css" href="website.css">
-	  <link rel="stylesheet" type= "text/css" href="navbar.css">
+  <!-- custom stylesheet -->
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename = 'css/website.css') }}">
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename = 'css/navbar.css') }}">
 
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -45,7 +45,7 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 				<!-- link to home page -->
 				<img src = "/static/images/C1Logo.png" width = "90" height ="46"></p>
 			</div>
-			<div class = "col-sm-7" id="title" style = "text-align: left;">DEALS FOR GOOD</div>
+			<div class = "col-sm-7" id="title" style = "text-align: left;">Deals for Good</div>
 			<div class = "col-sm-3" id = "search">
 				<div class="row">
 		        <div class="col-12">
@@ -86,7 +86,8 @@ AVAILIBLE VARIABLES PASSED IN FROM FLASK:
 					</div>
 					<div style = "border-bottom: solid black; border-width: 1px; margin: 8vh;"></div>
 					<div class = "row" style = "font-size: 7vh; margin-bottom: 5vh;">{{ dealTitle }}</div>
-					<div class = "row" style = "font-size: 4vh; margin-bottom: 5vh;">By donating to</div>
+					<div style = "border-bottom: solid black; border-width: 1px; margin: 8vh;"></div>
+					<div class = "row" style = "font-size: 3vh; margin-bottom: 2vh;">By donating to</div>
 					<div class = "row" style = "font-size: 7vh;">
 						<div style = "margin-right: 5vh;">
 							<img src = {{ charityPictureURL }} style = "width:100%;height :auto;">

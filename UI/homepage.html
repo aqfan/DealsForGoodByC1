@@ -1,142 +1,137 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-      <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-
-
-	  <!-- custom stylesheet -->
-	  <link rel="stylesheet" type= "text/css" href="website.css">
-	  <link rel="stylesheet" type= "text/css" href="navbar.css">
-
-<!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 
 
-    </head>
-	<body>
-		
+  <!-- custom stylesheet -->
+  <link rel="stylesheet" type= "text/css" href="website.css">
+  <link rel="stylesheet" type= "text/css" href="navbar.css">
 
-		
-		
-		
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
 
-		<!-- Nav Bar-->
-		<div class = "row flex-nowrap justify-content-between align-items-center" id ="navbar">
-			<div class = "col-sm-1">
-				<img src = "C1Logo.png" width = "42" height ="46">
-			</div>
-			<div class = "col-sm-7" id="title" style = "text-align: left;">DEALS FOR GOOD</div>
-			<div class = "col-sm-3" id = "search">
-				<div class="row">
-		        <div class="col-12">
-		            <div class="input-group">
-		                <input class="form-control border-secondary py-2" type="search" value="search">
-		                <div class="input-group-append">
-		                    <button class="btn btn-outline-secondary" type="button">
-		                         <i class="material-icons" style="font-size:25px;color:lightgray; float: right;">search</i>
-		                    </button>
-		                </div>
-		            </div>
-		        </div>
-		    	</div>
+</head>
+<body ng-app="homepage">
+  <!-- Nav Bar-->
+  <div class = "row flex-nowrap justify-content-between align-items-center" id ="navbar">
+    <div class = "col-sm-1">
+      <img src = "C1Logo.png" width = "42" height ="46">
+    </div>
+    <div class = "col-sm-7" id="title" style = "text-align: left;">DEALS FOR GOOD</div>
+    <div class = "col-sm-3" id = "search">
+      <div class="row">
+        <div class="col-12">
+          <div class="input-group">
+            <input class="form-control border-secondary py-2" type="search" value="search">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">
+                <i class="material-icons" style="font-size:25px;color:lightgray; float: right;">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			</div>
-			<div class = "col-sm-1" id="signup" >
-				<button class="btn btn-outline-secondary" type="button">
-				<a href = "#">sign up</a>
-				</button>
-			</div>
-		</div>
-
-                
-		
-    
-
-		<div class="jumbotron vertical-center" >
-			
-				
-				<h1 style= "color: lightgrey; font-size: 5em;color:white;font-weight: bolder;"> Some inciteful comment</h1>
-			
-				
-				
-		</div>
+    </div>
+    <div class = "col-sm-1" id="signup" >
+      <button class="btn btn-outline-secondary" type="button">
+        <a href = "#">sign up</a>
+      </button>
+    </div>
+  </div>
 
 
-		<!-- stores -->
 
-		<div id = "storecollection" class = "i-am-centered" style = "margin-top: 5vh;" >
-			<h1 style = "margin-bottom: 7vh;">Participating stores</h1>
-			<div class = "row">
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><a href = "#"><img src = "C1Logo.png"></a></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-			</div>
-			<div class = "row">
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-			</div>
-			<div class = "row">
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-				<div class = "col-sm-4 store"> 
-					<div style="display:flex;justify-content:center;align-items:center;">
-  						<div><img src = "C1Logo.png" ></div>
-					</div>
-				</div>
-			</div>
 
-			
 
-		</div>
+  <div class="jumbotron vertical-center" >
 
-		
 
-		<div class="page-footer" style = "margin: 5vh;">
-				<div class = 'row'>
-					<div class = "col-sm-12"><a href="https://www.linkedin.com/in/candia-gu-3a5b88b9?trk=nav_responsive_tab_profile">about us</a></div>
-					
-				</div>
-		</div>
+    <h1 style= "color: lightgrey; font-size: 5em;color:white;font-weight: bolder;"> Some inciteful comment</h1>
 
-		<!-- Optional JavaScript -->
-	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	</body>
-  </html>
+
+
+  </div>
+
+
+  <!-- stores -->
+
+  <div id = "storecollection" class = "i-am-centered" style = "margin-top: 5vh;" ng-controller="ListController">
+    <h1 style = "margin-bottom: 7vh;">Participating stores</h1>
+    <div class = "row">
+      <div class = "col-sm-4 store" ng-repeat="icon in iconGroup">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><a href = "#"><img ng-src="{{icon.image}}"></a></div>
+        </div>
+      </div>
+      <!-- <div class = "col-sm-4 store">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><img src = "C1Logo.png" ></div>
+        </div>
+      </div>
+      <div class = "col-sm-4 store">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><img src = "C1Logo.png" ></div>
+        </div>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-sm-4 store">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><img src = "C1Logo.png" ></div>
+        </div>
+      </div>
+      <div class = "col-sm-4 store">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><img src = "C1Logo.png" ></div>
+        </div>
+      </div>
+      <div class = "col-sm-4 store">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><img src = "C1Logo.png" ></div>
+        </div>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-sm-4 store">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><img src = "C1Logo.png" ></div>
+        </div>
+      </div>
+      <div class = "col-sm-4 store">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><img src = "C1Logo.png" ></div>
+        </div>
+      </div>
+      <div class = "col-sm-4 store">
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div><img src = "C1Logo.png" ></div>
+        </div>
+      </div> -->
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="page-footer" style = "margin: 5vh;">
+    <div class = 'row'>
+      <div class = "col-sm-12"><a href="https://www.linkedin.com/in/candia-gu-3a5b88b9?trk=nav_responsive_tab_profile">about us</a></div>
+
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="homepage.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
